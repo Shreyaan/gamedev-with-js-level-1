@@ -9,7 +9,7 @@ let previousScore = 0;
 let score = 0;
 //game
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(300, 400);
   for (let i = 0; i < numberOfEnimies; i++) {
     let enemy = {
       x: random(0, width),
