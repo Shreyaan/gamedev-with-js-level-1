@@ -58,7 +58,7 @@ play again`,width/2,height/2)
         enemies.push(Newenemy);
         document.querySelector(
           "#gameover"
-        ).innerHTML = `Difficulty = ${Math.round(speedOfenemies * 10 - 8)}`;
+        ).innerHTML = `Difficulty = ${Math.round(speedOfenemies * 10 - 7)}`;
         if (score - previousScore == 20) {
           speedOfenemies += 0.1;
           previousScore = score;
