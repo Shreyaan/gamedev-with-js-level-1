@@ -5,7 +5,7 @@ let enemies = [];
 let numberOfEnimies = 10;
 let speedOfBullet = 5;
 let speedOfenemies = 0.8;
-
+let score=0
 //game
 function setup() {
   createCanvas(400, 400);
@@ -35,6 +35,10 @@ function draw() {
   for (let enemy of enemies) {
     enemy.y += speedOfenemies;
     rect(enemy.x, enemy.y, 10);
+    if(enemy.y>height){
+      text('u lose hahaha',width/2,height/2)
+      noLoop()
+    }
   }
   //collisions
   for (let enemy of enemies) {
@@ -46,10 +50,14 @@ function draw() {
           x: random(0, width),
           y: random(-800, 0),
         };
+        score++
         enemies.push(Newenemy);
       }
     }
   }
+  textSize(30);
+
+  text(score,15, 45)
 }
 
 function mousePressed() {
